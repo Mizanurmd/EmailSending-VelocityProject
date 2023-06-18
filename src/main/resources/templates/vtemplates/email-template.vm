@@ -2,16 +2,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1"/>
-<title>Payment Voucher</title>
+<title>Todo Task Details</title>
 </head>
 <body>
 <div class="container">
 <h1>ToDo Task Details</h1>
 <hr>
-<h3>Task name        : ${test.taskName}</h3>
-<h3>Task Description : ${test.description}</h3>
-<h3>Task Date        : ${test.date}</h3>
-<h3>Task Start time  : ${test.startTime}</h3>
+<h3>Task name        : ${task.taskName}</h3>
+<h3>Task Description : ${task.description}</h3>
+<h3>Task Date        : ${task.date}</h3>
+<h3>Task Start time  : ${task.startTime}</h3>
 
    <hr>
     

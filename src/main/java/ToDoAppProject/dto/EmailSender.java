@@ -27,7 +27,7 @@ public class EmailSender {
 			public void prepare(MimeMessage mimeMessage) throws Exception {
 				MimeMessageHelper m = new MimeMessageHelper(mimeMessage);
 				//m.setTo("mizanur021991@gmail.com");
-				m.setTo("mizanur021991@gmail.com");
+				m.setTo("mizanur.rahman@metafour.com");
 				m.setFrom("sizansarder11@gmail.com");
 				m.setSubject("Task Completed");
 				
@@ -44,7 +44,7 @@ public class EmailSender {
 		};
 		try {
 			jmSender.send(preparator);
-			//double d = 5/0;
+			double d = 5/0;
 			return "Email sending completed.";
 
 		} catch (Exception e) {
