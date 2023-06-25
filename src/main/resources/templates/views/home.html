@@ -47,7 +47,7 @@
 	<div class="col-md-12 container p-3 mb-2 bg-light bg-gradient">
 		<div class="row">
 			<div class="col-md-6">
-				<a th:href="@{/showAddForm}" class="btn btn-primary me-3"> <i
+				<a th:href="@{/addForm}" class="btn btn-primary me-3"> <i
 					class="fa-solid fa-address-book"></i> Add Task
 				</a> <a th:href="@{/home}" class="btn btn-primary me-3"> <i
 					class="fa-solid fa-list"></i> Task List
@@ -83,12 +83,13 @@
 
 	<hr>
 	<div class="container">
-		<table class="table table-striped table-success">
+		<table class="table table-striped table-light">
 			<thead>
 				<tr class="table-dark">
 					<th scope="col">Task Name</th>
 					<th scope="col">Description</th>
-					<th scope="col">Date</th>
+					<th scope="col">Start Date</th>
+					<th scope="col">End Date</th>
 					<th scope="col">Start Time</th>
 					<th scope="col">End Time</th>
 					<th scope="col">Status</th>
@@ -98,14 +99,19 @@
 			</thead>
 			<tbody>
 				<tr th:each="task : ${taskList}">
-					 <th th:text="${task.task_Name}"></th>
-					<th th:text="${task.description}"></th>
-					<th th:text="${task.date}"></th>
-					<th th:text="${task.start_Time}"></th>
-					<th th:text="${task.end_Time}"></th>
-					<th th:text="${task.status}"></th>
-					<th th:text="${task.remarks}"></th>
-					
+					 <td th:text="${task.task_Name}"></td>
+					<td th:text="${task.description}"></td>
+					<td th:text="${task.date}"></td>
+					<td th:text="${task.endDate}"></td>
+					<td th:text="${task.start_Time}"></td>
+					<td th:text="${task.end_Time}"></td>
+					<td th:text="${task.status}"></td>
+					<td th:text="${task.remarks}"></td>
+					<td>
+					<a th:href="@{/update/{id}(id=${task.id})}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
+					<a th:href="@{/delete/{id}(id=${task.id})}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+					<a class="btn btn-info"><i class="fa-solid fa-envelope-circle-check"></i></a>
+					</td>
 					
 				</tr>
 

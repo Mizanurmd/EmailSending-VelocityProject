@@ -36,7 +36,6 @@ public class EmailController {
 	}
 	
 	@GetMapping("/test")
-	
 	public String testvelocity() {
 
 		return "vtemplates/test.vm";
